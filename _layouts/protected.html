@@ -1,1 +1,15 @@
 
+---
+layout: default
+---
+<script src="{{ '/assets/js/auth/auth.js' | relative_url }}"></script>
+<div class="protected-content">
+  {{ content }}
+  <button id="logoutBtn">Cerrar sesión</button>
+</div>
+<script>
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    localStorage.removeItem('portfolio_authenticated');
+    window.location.href = '/login.html';
+  });
+</script>
