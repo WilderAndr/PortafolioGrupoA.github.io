@@ -1,1 +1,22 @@
-
+---
+layout: null
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login | Portafolio</title>
+  <link rel="stylesheet" href="{{ '/assets/css/auth.css' | relative_url }}">
+</head>
+<body>
+  <div class="auth-container">
+    <h1>Acceso Restringido</h1>
+    <form id="loginForm">
+      <input type="password" id="password" placeholder="Ingresa la contraseña" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <p id="error" class="error-message"></p>
+  </div>
+  <script src="{{ '/assets/js/auth/crypto.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/auth/auth.js' | relative_url }}"></script>
+</body>
+</html>
